@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GestureMainActivity">
+
+    <com.zzt.gesture.MoveResizeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/gst_top"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/bg_color_1"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/gst_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <View
+            android:id="@+id/gst_view"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/bg_color_8"
+            app:layout_constraintBottom_toTopOf="@+id/gst_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gst_top" />
+
+        <LinearLayout
+            android:id="@+id/gst_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/bg_color_7"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gst_view"
+            app:layout_constraintVertical_weight="1">
+
+            <LinearLayout
+                android:id="@+id/gst_content_v1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/bg_color_3"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/gst_content_v2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/bg_color_4"
+                android:orientation="vertical" />
+
+            <FrameLayout
+                android:id="@+id/gst_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/bg_color_5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gst_bottom_open"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="@color/bg_color_2"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </com.zzt.gesture.MoveResizeLayout>
+</FrameLayout>
